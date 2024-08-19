@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AvatarView" customModule="EditProfile" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="vLi-wh-vP3" id="L9y-wm-frB"/>
+                <outlet property="contentView" destination="i5M-Pr-FkT" id="wre-EZ-FHw"/>
+                <outlet property="editButton" destination="Bei-PB-l5S" id="Aj4-HC-FU2"/>
+                <outlet property="imgView" destination="mQ1-qE-dWo" id="ehd-ms-P18"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="241"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLi-wh-vP3">
+                    <rect key="frame" x="4" y="4" width="252" height="233"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mQ1-qE-dWo">
+                            <rect key="frame" x="2" y="3" width="248" height="227.66666666666666"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstItem="mQ1-qE-dWo" firstAttribute="leading" secondItem="vLi-wh-vP3" secondAttribute="leading" constant="2" id="4CN-fy-6pO"/>
+                        <constraint firstAttribute="trailing" secondItem="mQ1-qE-dWo" secondAttribute="trailing" constant="2" id="HBY-01-ASV"/>
+                        <constraint firstItem="mQ1-qE-dWo" firstAttribute="top" secondItem="vLi-wh-vP3" secondAttribute="top" constant="2" id="QPJ-2Z-8Rh"/>
+                        <constraint firstAttribute="bottom" secondItem="mQ1-qE-dWo" secondAttribute="bottom" constant="2" id="bey-xL-OOd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bei-PB-l5S">
+                    <rect key="frame" x="220" y="201" width="40" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7lb-zX-cn4"/>
+                        <constraint firstAttribute="width" constant="40" id="9rA-Fx-ZpQ"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="camera" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapEdit:" destination="-1" eventType="touchUpInside" id="Wv9-er-A73"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Bei-PB-l5S" secondAttribute="trailing" id="1SP-dC-9eF"/>
+                <constraint firstItem="vLi-wh-vP3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="4" id="JGy-ks-8Vf"/>
+                <constraint firstAttribute="trailing" secondItem="vLi-wh-vP3" secondAttribute="trailing" constant="4" id="NKh-tb-zzt"/>
+                <constraint firstAttribute="bottom" secondItem="vLi-wh-vP3" secondAttribute="bottom" constant="4" id="dAh-H6-UvK"/>
+                <constraint firstItem="vLi-wh-vP3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="4" id="eJA-ub-Vma"/>
+                <constraint firstAttribute="bottom" secondItem="Bei-PB-l5S" secondAttribute="bottom" id="ned-Pv-7Ar"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-576.81159420289862" y="145.51630434782609"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
